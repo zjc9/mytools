@@ -4,6 +4,7 @@ import javax.swing.*;
 import javax.swing.tree.DefaultMutableTreeNode;
 
 import com.zjc.tools.components.actions.acions;
+import com.zjc.tools.components.views.menu;
 
 import java.awt.*;
 
@@ -13,6 +14,8 @@ public class start extends JFrame {
         JFrame main = new JFrame();
         main.setLayout(new BorderLayout());
         acions acions = new acions();
+        menu menu = new menu();
+        main.setJMenuBar(menu.addMeun());
         main.setIconImage(new ImageIcon("1.png").getImage());
         main.setBackground(Color.white);
         main.setTitle("tools");    //设置显示窗口标题
