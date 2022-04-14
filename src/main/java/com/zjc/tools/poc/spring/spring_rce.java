@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class spring_rce {
-    http http = new http();
+    http http = com.zjc.tools.utils.http.getInstance();
     public   String  exp(String url,String cmd){
         InetSocketAddress addr = new InetSocketAddress("127.0.0.1", 8888);
         Proxy proxy = new Proxy(Proxy.Type.HTTP,addr);
@@ -32,7 +32,7 @@ public class spring_rce {
 
         InetSocketAddress addr = new InetSocketAddress("127.0.0.1", 8888);
         Proxy proxy = new Proxy(Proxy.Type.HTTP,addr);
-        String get = http.sendRequest(string, "GET",headers,proxy);
+        String get = http.sendRequest(string, "GET",headers);
       System.out.println(get);
         return "";
     }
